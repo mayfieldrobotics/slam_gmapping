@@ -30,6 +30,8 @@
 
 #include <boost/thread.hpp>
 
+#define ANGLE_EPSILON .03
+
 class SlamGMapping
 {
   public:
