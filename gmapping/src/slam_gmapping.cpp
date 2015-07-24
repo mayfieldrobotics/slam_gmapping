@@ -406,7 +406,7 @@ SlamGMapping::initMapper(const sensor_msgs::LaserScan& scan)
   }
 
   // Check that laserscan is from -x to x in angles:
-  if (fabs(fabs(scan.angle_min) - fabs(scan.angle_max)) > FLT_EPSILON)
+  if (fabs(fabs(scan.angle_min) - fabs(scan.angle_max)) > ANGLE_EPSILON)
   {
     ROS_ERROR("Scan message must contain angles from -x to x, i.e. angle_min = -angle_max");
     return false;
